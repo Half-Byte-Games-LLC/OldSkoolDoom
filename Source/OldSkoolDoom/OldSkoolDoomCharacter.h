@@ -23,8 +23,13 @@ class AOldSkoolDoomCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
 
+	
+
 public:
 	AOldSkoolDoomCharacter();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Character|Weapon Equipped")
+	UChildActorComponent* EquippedWeapon;
 
 protected:
 	virtual void BeginPlay();

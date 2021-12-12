@@ -32,6 +32,9 @@ AOldSkoolDoomCharacter::AOldSkoolDoomCharacter()
 	FirstPersonCameraComponent->SetRelativeLocation(FVector(-39.56f, 1.75f, 64.f)); // Position the camera
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 
+	EquippedWeapon = CreateDefaultSubobject<UChildActorComponent>(TEXT("Equipped Weapon"));
+	EquippedWeapon->SetupAttachment(FirstPersonCameraComponent);
+
 	// Uncomment the following line to turn motion controllers on by default:
 	//bUsingMotionControllers = true;
 }
